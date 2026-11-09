@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A contemporary learning experience inspired by Radhanath Phukan’s scholarly method: source first, question, compare, test, and realise—applied to AI, philosophy, translation, and human discernment." name="description"/>
+<title>How He Read the Vedas — And How We Should Read AI | Radhanath Phukan Ideas Lab</title>
+<style>
+:root{--ink:#20363b;--muted:#5b6d70;--paper:#f7f5ef;--white:#fff;--teal:#1e5058;--teal2:#2d6970;--gold:#b89552;--line:#d9dfdc;--soft:#eaf0ed;--serif:Georgia,"Times New Roman",serif;--sans:Arial,Helvetica,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 var(--sans)}
+a{color:var(--teal2)}a:hover{color:#143940}.topline{background:#183c43;color:#edf2ef;padding:11px max(22px,calc((100% - 1180px)/2));display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.82rem}
+.topline a{color:#fff;text-decoration:none}.topline .return{font-weight:700;border-bottom:1px solid #b9c9c5}
+.hero{background:linear-gradient(125deg,#183c43 0%,#285c63 66%,#416e70 100%);color:#fff;padding:clamp(54px,8vw,104px) 24px 72px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:480px;height:480px;border:1px solid rgba(230,210,160,.2);border-radius:50%;right:-130px;top:-170px;box-shadow:0 0 0 50px rgba(230,210,160,.035),0 0 0 100px rgba(230,210,160,.025)}
+.wrap{max-width:1160px;margin:auto}.eyebrow{font-size:.75rem;letter-spacing:.19em;text-transform:uppercase;color:#e3c98f;font-weight:700}.hero h1{font:clamp(2.6rem,6vw,5.2rem)/1.04 var(--serif);max-width:900px;margin:18px 0 20px;letter-spacing:-.035em}.hero h1 em{color:#e4cd98;font-style:normal}.hero h2{font:clamp(1.2rem,2.5vw,1.75rem)/1.4 var(--serif);font-weight:400;margin:0 0 15px}.hero .tagline{font-size:1.12rem;color:#e6eeea;margin:0;max-width:700px}.hero .tagline strong{color:#f0d69a}
+section{padding:clamp(48px,7vw,82px) 24px}.section-head{max-width:800px;margin:0 0 30px}.section-head .eyebrow{color:var(--teal2)}h2{font:clamp(1.8rem,3.4vw,2.7rem)/1.15 var(--serif);margin:8px 0 16px;letter-spacing:-.02em}h3{font:1.24rem/1.3 var(--serif);margin:0 0 10px}p{margin:0 0 14px}.lead{font-size:1.12rem;color:#3e5559;max-width:850px}
+.method{background:#fff}.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.step{border:1px solid var(--line);border-radius:12px;padding:20px 17px;background:#fbfcfa;min-height:210px}.step .num{font-size:.72rem;font-weight:700;letter-spacing:.14em;color:var(--gold)}.step h3{margin:9px 0}.step p{font-size:.91rem;line-height:1.6;color:var(--muted);margin:0}
+.timeline{background:var(--soft)}.timeline-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.era{background:#fff;border:1px solid var(--line);border-radius:14px;padding:25px}.era .year{font:2rem var(--serif);color:var(--teal2);font-weight:bold}.era ul{padding-left:20px;margin:10px 0 0}.era li{margin:7px 0}.bridge{text-align:center;color:var(--gold);font-weight:700;letter-spacing:.12em;margin:20px 0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}.card .tag{font-size:.72rem;letter-spacing:.12em;color:var(--teal2);font-weight:700;text-transform:uppercase}.card p{font-size:.94rem;color:#4d6063}.card .verdict{border-top:1px solid var(--line);padding-top:13px;margin-top:15px;color:var(--ink);font-size:.9rem}.comparison{background:#fff}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}table{border-collapse:collapse;width:100%;min-width:650px;background:white}th,td{text-align:left;vertical-align:top;padding:15px 18px;border-bottom:1px solid var(--line)}th{background:#eaf0ed;color:var(--teal);font-size:.8rem;letter-spacing:.07em;text-transform:uppercase}tr:last-child td{border-bottom:0}
+.test{background:#f0eee6}.test-panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(22px,4vw,38px);max-width:920px}.test-list{display:grid;gap:14px;margin:22px 0}.test-item{display:grid;grid-template-columns:24px 1fr;gap:12px;padding:14px;border:1px solid var(--line);border-radius:10px}.test-item input{width:19px;height:19px;margin-top:5px;accent-color:var(--teal2)}.test-item strong{display:block}.test-item span{color:var(--muted);font-size:.92rem}.progress-row{display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap}.progress{height:8px;background:#e4e9e6;border-radius:20px;overflow:hidden;margin:12px 0 18px}.progress span{display:block;height:100%;width:0;background:var(--teal2);transition:width .2s}.result{font-weight:700;color:var(--teal)}.rule{border-left:3px solid var(--gold);padding:13px 17px;background:#f8f5ed;margin-top:20px}
+.ideals{background:#fff}.ideas-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.idea{border:1px solid var(--line);border-radius:12px;padding:20px}.idea h3{font-size:1.12rem}.idea .status{font-size:.7rem;color:#84662e;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.sources{background:#e9eeeb}.sources-list{columns:2;column-gap:35px;padding-left:20px}.sources-list li{break-inside:avoid;margin:0 0 12px;font-size:.9rem}.sources-list a{font-weight:700}.note{font-size:.85rem;color:var(--muted)}
+footer{background:#183c43;color:#e5eeea;padding:28px 24px;text-align:center;font-size:.88rem}footer a{color:#fff}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.cards{grid-template-columns:1fr}.sources-list{columns:1}}
+@media(max-width:650px){.timeline-grid,.ideas-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.step{min-height:unset}.topline{justify-content:center;text-align:center}}
+
+.ai-page-toc{position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;align-items:center;gap:.7rem 1.1rem;padding:.65rem 1.2rem;background:rgba(247,245,239,.96);border-bottom:1px solid #d8dfdc;backdrop-filter:blur(8px);font:600 .78rem/1.3 system-ui,sans-serif}.ai-page-toc .toc-label{font-size:.68rem;letter-spacing:.12em;color:#8a6a35}.ai-page-toc a{color:var(--teal);text-decoration:none}.ai-page-toc a:hover{text-decoration:underline}html{scroll-padding-top:5rem}.ai-page-toc{margin:0 auto;max-width:1200px}
+
+.source-quote-block{margin-top:1.5rem;padding:1.25rem 1.5rem;background:#fff;border-left:3px solid var(--gold);border-radius:.35rem}.source-quote-block h3{margin-top:0}.source-quote-block blockquote{margin:1rem 0;font-family:Georgia,serif;font-size:1.05rem;line-height:1.65;color:var(--ink)}.quote-attribution{font-size:.82rem;color:var(--muted)}.timeline-additions{margin-top:1rem;padding:.85rem 1rem;background:#fff;border:1px solid #d8dfdc;border-radius:.4rem}
+
+.evidence-legend{margin-top:1rem;font-size:.75rem;letter-spacing:.025em;color:var(--muted);text-align:center}.evidence-legend::before{content:'Evidence guide  ·  ';font-weight:700;color:var(--ink)}
+</style>
+<style id="parallel-critical-reading-styles">
+.parallel{background:#f7f5ef}.parallel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.parallel-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:clamp(22px,3vw,32px)}
+.parallel-label{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--teal2);margin-bottom:12px}
+.parallel-card h3{font-size:1.35rem;line-height:1.35;margin-bottom:14px}.parallel-card p{font-size:.95rem;color:#4d6063}
+.parallel-caveat{background:#f2f4f0;border-left:3px solid var(--gold);padding:12px 15px;margin:17px 0}
+.parallel-links{display:grid;gap:9px;margin-top:17px}.parallel-links a{font-size:.9rem;font-weight:700;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:7px}
+.parallel-principle{margin-top:20px;padding:17px 20px;border:1px solid #d9dfdc;border-radius:10px;background:#fff;line-height:1.65}
+@media(max-width:700px){.parallel-grid{grid-template-columns:1fr}}
+</style><style id="interactive-phukan-test-css">
+.test-item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:18px}
+.test-item .question-copy strong{display:block}.test-item .question-copy span{display:block;color:var(--muted);font-size:.92rem}
+.choice-group{display:flex;gap:7px;flex-wrap:wrap}.choice{position:relative;display:inline-flex;align-items:center}
+.choice input{position:absolute;opacity:0;width:1px;height:1px}
+.choice span{display:inline-block;border:1px solid #cbd6d2;border-radius:20px;padding:6px 12px;font-size:.82rem;font-weight:700;color:#36565a;background:#fff;cursor:pointer}
+.choice input:checked+span{background:#183c43;color:#fff;border-color:#183c43}
+.choice input:focus-visible+span{outline:3px solid #d5b46a;outline-offset:2px}
+.test-outcome{margin-top:18px;padding:20px;border:1px solid var(--line);border-radius:12px;background:#f7f8f5}
+.test-outcome h3{margin-bottom:8px}.test-outcome p{margin:0 0 10px}.test-outcome ul{margin:8px 0 0;padding-left:22px}
+.test-actions{margin-top:14px}.test-actions button{border:1px solid #183c43;background:#183c43;color:white;border-radius:24px;padding:9px 17px;font:inherit;font-weight:700;cursor:pointer}
+@media(max-width:720px){.test-item{grid-template-columns:1fr}.choice-group{margin-top:3px}}
+</style><style id="phukan-test-coaching-styles">
+#test-outcome{margin-top:18px;border:1px solid var(--line);border-radius:12px;background:#f7f8f5;padding:22px}
+#test-outcome h3{margin:0 0 10px;font-size:1.25rem}
+#test-outcome .outcome-summary{font-size:1rem;line-height:1.65}
+#test-outcome .test-advice-list{list-style:none;padding:0;margin:16px 0;display:grid;gap:12px}
+#test-outcome .advice-card{padding:15px 16px;border:1px solid #d7dfdc;background:#fff;border-radius:10px}
+#test-outcome .advice-card strong{display:block;margin-bottom:6px}
+#test-outcome .advice-card p{margin:7px 0;line-height:1.55}
+#test-outcome .advice-card .prompt{background:#f2f5f3;border-radius:7px;padding:10px 12px;font-size:.92rem}
+#test-outcome .copy-prompt{border:1px solid #b9cbc8;background:#fff;border-radius:18px;padding:7px 12px;font:inherit;font-size:.83rem;font-weight:700;color:var(--teal);cursor:pointer}
+#test-outcome .copy-prompt:hover{background:#edf4f2}
+#test-outcome .overall-next{margin-top:14px;padding:13px 15px;background:#f8f5ed;border-left:3px solid var(--gold);line-height:1.65}
+#test-outcome .verdict{display:inline-block;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal2);font-weight:700;margin-bottom:8px}
+</style><style id="ai-page-review1-integrated-styles">
+/* AI Page Review 1 — full integrated editorial build */
+.method-evidence{margin-top:22px;padding:20px 22px;border:1px solid var(--line);border-left:4px solid var(--gold);background:#f8f6ef;border-radius:10px}
+.method-evidence-label,.worked-num,.concept-term{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal2)}
+.method-evidence p{margin:8px 0 0}.method-caveat{font-size:.88rem;color:var(--muted)}
+.worked{background:#f0eee6}.worked-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.worked-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:23px;display:flex;flex-direction:column}
+.worked-card h3{font-size:1.3rem;margin:10px 0 18px}.worked-part{margin-bottom:13px}.worked-part b{font-size:.82rem;color:var(--teal2)}.worked-part p{font-size:.91rem;color:#4d6063;margin:4px 0 0;line-height:1.62}
+.worked-verdict{margin-top:auto;padding:14px 0 0;border-top:1px solid var(--line);font-size:.9rem;line-height:1.6}
+.concepts{background:#fff}.concept-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.concept-card{padding:21px;border:1px solid var(--line);border-radius:12px;background:#fbfcfa}
+.concept-card h3{margin:7px 0 10px}.concept-card p{font-size:.91rem;color:#4d6063;line-height:1.65}
+.concept-highlight{background:#edf3f0;border-color:#b9cbc5}.concept-note{margin-top:18px;padding:16px 19px;border-left:3px solid var(--gold);background:#f8f5ed;line-height:1.65}
+.visitor-usecases{margin-top:36px;padding-top:30px;border-top:1px solid var(--line)}.visitor-usecases h3{font-size:1.5rem}
+.usecase-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.usecase-grid article{padding:17px;border:1px solid var(--line);border-radius:10px;background:#fbfcfa}.usecase-grid b{color:var(--teal2)}.usecase-grid p{font-size:.9rem;margin:6px 0 0;color:#4d6063}
+.thought-experiment{background:#183c43;color:#edf2ef}.thought-experiment .eyebrow{color:#e3c98f}.thought-experiment h2{color:#fff}.thought-experiment .lead{color:#d6e3df}
+.thought-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;align-items:start}
+.thought-card{background:#fff;color:var(--ink);border-radius:14px;padding:25px}
+.thought-line{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+.thought-line span{font:1.1rem var(--serif);color:var(--gold);font-weight:bold}.thought-line p{margin:0;line-height:1.6}
+.thought-conclusion{font:1.15rem/1.6 var(--serif);padding-top:19px;color:var(--teal)}
+.comparison-thesis{margin-top:20px;padding:20px 22px;border-radius:10px;background:#f8f5ed;border-left:4px solid var(--gold)}
+.comparison-thesis p{margin:7px 0 0}
+.try-answer{padding:18px;background:#f8f5ed;border:1px solid var(--line);border-radius:10px;margin:16px 0}
+.try-answer label{display:block;margin-bottom:9px}.try-answer textarea{display:block;width:100%;border:1px solid #cbd6d2;border-radius:8px;padding:12px;font:inherit;line-height:1.55;background:#fff;color:var(--ink);resize:vertical}
+@media(max-width:950px){.worked-grid,.concept-grid,.usecase-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.thought-layout{grid-template-columns:1fr}}
+@media(max-width:650px){.worked-grid,.concept-grid,.usecase-grid{grid-template-columns:1fr}.worked-card{padding:20px}}
+</style><style id="ai-page-review2-phukan-test-guidance"></style><meta content="How He Read the Vedas — And How We Should Read AI" property="og:title"/><meta content="A contemporary Ideas Lab connecting Radhanath Phukan’s documented scholarly practice with responsible, discerning use of AI." property="og:description"/><meta content="https://radhanath-phukan-archive.vercel.app/og-image.jpg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://radhanath-phukan-archive.vercel.app/og-image.jpg" name="twitter:image"/></head>
+<body><nav aria-label="On this page" class="ai-page-toc"><span class="toc-label">ON THIS PAGE</span><a href="#method">Method</a><a href="#worked-examples">Examples</a><a href="#samkhya-concepts">Concepts</a><a href="#comparison">Comparison</a><a href="#ideas-lab">Ideas Lab</a><a href="#phukan-chatgpt">What Would Phukan Ask?</a><a href="#parallel">Parallel</a><a href="#sources">Sources</a><a href="#phukan-test">Phukan Test</a></nav>
+<div class="topline"><a class="return" href="/">← Return to the Radhanath Phukan Archive</a><span>IDEAS LAB · A CONTEMPORARY EXPLORATION</span></div>
+<header class="hero">
+<div class="wrap">
+<div class="eyebrow">A living Ideas Lab inspired by Radhanath Phukan</div>
+<h1>How He Read the Vedas — <em>And How We Should Read AI</em></h1>
+<h2>Two timelines. One method. 1896 and 2026.</h2>
+<p class="tagline"><strong>“AI can give you the text. Phukan teaches you how to question it.”</strong></p>
+</div>
+</header>
+<section>
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">The connection</div><h2>His scholarship. Our questions.</h2></div>
+<p class="lead">Radhanath Phukan (1875–1964) brought disciplined inquiry to his study and translation of Indian philosophy. He returned to foundational texts, examined interpretations, placed ideas in conversation with modern physical science, and sought to make difficult concepts accessible in Assamese. His 1960 edition of the Sāṃkhya Kārikā—subtitled “A Treatise on Psycho-physics for Self-realization”—offers a compelling point of departure for thinking about AI today. This page does not claim that Phukan wrote about artificial intelligence. It applies a contemporary method inspired by his documented scholarly practice.</p><p>His daughter-in-law Nirupama Phukan proved the method in the next generation — translating <em>Godan</em> into Assamese for a lay reader. <a href="/#nirupama-phukan">Read about her literary legacy on the main archive page.</a></p><p>AI can retrieve, translate, and summarize at extraordinary speed. But fluency is not discernment. We must ask what is sourced, what is assumed, what is analogy, what remains uncertain—and who is responsible for acting.</p>
+
+
+</div>
+</section>
+<section class="timeline">
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">Two timelines</div><h2>1896 → 2026</h2><p class="lead">A century-plus apart, the challenge remains: how do we make knowledge meaningful without surrendering judgment?</p><p class="note">The Jorhat District, Government of Assam, records that Phukan completed his Master’s degree in Physics at Presidency College, Calcutta, in 1896.</p></div>
+<div class="timeline-grid">
+<article class="era"><div class="year">1896</div><h3>Scientific education</h3><p>Phukan’s scientific education at Presidency College, Calcutta, in 1896 formed part of the intellectual foundation he later brought to his study of Indian philosophy.</p><ul><li>Scientific inquiry and reason</li><li>Study of foundational philosophical texts</li><li>Knowledge made accessible in Assamese</li></ul></article>
+<article class="era"><div class="year">1949–1960</div><h3>Translation and interpretation</h3><ul><li><em>Sāṃkhya Darśana</em> (1949)</li><li><em>Vedānta Darśana</em> (1951)</li><li><em>Gītā</em> (1952)</li><li><em>Kathāre Upaniṣad</em> (1954)</li><li><em>The Sāṃkhya Kārikā</em> (1960), subtitled “A Treatise on Psycho-physics for Self-realization”</li></ul></article>
+</div>
+<div class="bridge">SAME HUMAN CHALLENGE · NEW TOOL</div>
+<div class="timeline-grid"><article class="era"><div class="year">2026</div><h3>AI can retrieve and generate</h3><ul><li>Translate across languages quickly</li><li>Summarize and compare material</li><li>Generate fluent claims that may be unsupported or false</li></ul></article><article class="era"><div class="year">NOW</div><h3>Keep discernment in the human loop</h3><ul><li>Ask for sources and inspect them</li><li>Question the premise</li><li>Compare and test before relying on an answer</li><li>Remain accountable for consequential decisions</li></ul></article></div>
+</div>
+<p class="timeline-additions">Further works in the period: Vijnanar Sipare (1955); Janmantar Rahasya (1957); The Theory of Rebirth (1962).</p></section>
+<section class="method" id="method">
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">A modern framework inspired by his practice</div><h2>The Five-Step Method — From Text to Discernment</h2><p class="lead">A five-step discipline for reading difficult texts—and for evaluating an AI answer. This is a contemporary synthesis, not a protocol Phukan formally named.</p></div>
+<div class="steps">
+<article class="step"><div class="num">01</div><h3>Source First</h3><p>Return to the primary text. Separate the original from commentary, paraphrase, and later interpretation.</p></article>
+<article class="step"><div class="num">02</div><h3>Question the Premise</h3><p>Reframe the question. What assumptions are hidden inside it? What would the counter-question be?</p></article>
+<article class="step"><div class="num">03</div><h3>Compare</h3><p>Place interpretations and traditions side by side. Make disagreement visible rather than smoothing it away.</p></article>
+<article class="step"><div class="num">04</div><h3>Test</h3><p>Examine claims against evidence, reason, experience, and the limits of any analogy. Distinguish proof from illustration.</p></article>
+<article class="step"><div class="num">05</div><h3>Realise</h3><p>Turn understanding into responsible judgment and action. Ask what follows—and who remains accountable.</p></article>
+</div>
+<div class="method-evidence">
+<div class="method-evidence-label">Grounded in Phukan’s own preface</div>
+<p>Phukan explains that he translated the Sāṃkhya Kārikās and Brahma-Sūtras into Assamese because they had not been available in Assamese for a long time. He also describes using illustrations from modern physical science to explain his points.</p>
+<p class="method-caveat">The five-step sequence below is our contemporary synthesis of his scholarly practice—not a protocol he formally named.</p>
+</div>
+</div>
+<div class="source-quote-block" id="phukan-voice"><h3>In Phukan’s own words</h3><blockquote>“In all those books I tried to explain my points by citing illustrations from modern physical science. It is no doubt unorthodox to try to understand spiritual truths with a materialistic outlook, but my attempt was perhaps not entirely unsuccessful...”</blockquote><p class="quote-attribution">Radhanath Phukan, Preface to The Sāṃkhya Kārikā (1960).</p><blockquote>“Whether the Samkhya Philosophy is atheistic and without a clear meaning; or whether it is a precisely scientific treatise on ‘Psycho-Physics for God-realization’.”</blockquote><p class="quote-attribution">Radhanath Phukan, wording from the 1960 edition; retain as a question he frames, not as a settled verdict.</p></div></section><section class="worked" id="worked-examples">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Reading in practice · Three examples</div>
+<h2>How He Examined Ideas</h2>
+<p class="lead">These examples show how a question can be opened up, examined, and explained. They are presented as interpretive pathways; disputed conclusions should remain visible rather than being treated as settled consensus.</p>
+</div>
+<div class="worked-grid">
+<article class="worked-card">
+<div class="worked-num">CASE 01 · CLASSIFICATION</div>
+<h3>Sāṃkhya: Is it atheistic?</h3>
+<div class="worked-part"><b>The question</b><p>Can a philosophical system be labelled “atheistic” solely because it does not foreground Ishvara?</p></div>
+<div class="worked-part"><b>Phukan’s interpretive move</b><p>Examine the roles of Purusha, Prakriti, and liberation within the system instead of relying only on a label inherited from commentators.</p></div>
+<div class="worked-part"><b>What this opens</b><p>The system’s structure may complicate a simple classification. Different schools and scholars interpret Sāṃkhya’s relation to theism differently.</p></div>
+<div class="worked-verdict"><b>AI practice:</b> Ask for the strongest arguments on both sides, the textual basis for each, and what remains disputed. Do not present one interpretation as consensus without evidence.</div>
+</article>
+<article class="worked-card">
+<div class="worked-num">CASE 02 · CONTINUITY</div>
+<h3>Rebirth: What does continuity mean?</h3>
+<div class="worked-part"><b>The question</b><p>How does <i>Janmantar Rahasya</i> approach continuity, causation, and subtle impressions (<i>samskara</i>)?</p></div>
+<div class="worked-part"><b>A possible comparison</b><p>Memory, habit, unconscious processes, and psychological continuity may offer points of comparison for a modern reader.</p></div>
+<div class="worked-part"><b>The limit</b><p>These comparisons do not empirically establish rebirth, nor do they prove that samskara is identical to a psychological mechanism.</p></div>
+<div class="worked-verdict"><b>AI practice:</b> Ask the model to separate the philosophical account, modern analogy, and empirical evidence. Keep the boundary explicit.</div>
+</article>
+<article class="worked-card">
+<div class="worked-num">CASE 03 · ACCESS</div>
+<h3>Gita and Upanishads: Meaning for a lay reader</h3>
+<div class="worked-part"><b>The question</b><p>How can a difficult philosophical text become meaningful beyond a specialist’s Sanskrit vocabulary?</p></div>
+<div class="worked-part"><b>Phukan’s scholarly practice</b><p>Translate and explain major texts in Assamese, using accessible language and illustrations to open the ideas to a wider readership.</p></div>
+<div class="worked-part"><b>What must be preserved</b><p>Accessibility should not erase context, ambiguity, or differences between the source text and the explanation.</p></div>
+<div class="worked-verdict"><b>AI practice:</b> Request source text, translation, transliteration where useful, a plain-language explanation, and notes on interpretive choices.</div>
+</article>
+</div>
+</div>
+</section>
+<section>
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">Phukan &amp; AI</div><h2>Where philosophy meets computation</h2><p class="lead">These connections are interpretive lenses for today—not claims that Phukan anticipated artificial intelligence.</p></div>
+<div class="cards">
+<article class="card"><div class="tag">01 · Philosophical lens</div><h3>Purusha and Prakriti</h3><p>In classical Sāṃkhya, Purusha is witnessing consciousness; Prakriti encompasses material and mental processes, including Buddhi, Manas, and Ahamkara. AI computation can be explored as a process within the material world.</p><p>Whether an AI system has subjective consciousness is a separate, unresolved question. The analogy should not be mistaken for scientific proof.</p><div class="verdict"><strong>Question:</strong> Does the system possess understanding—or produce outputs that appear understanding-like?</div></article>
+<article class="card"><div class="tag">02 · Human responsibility</div><h3>Viveka in the human loop</h3><p>Judge AI not only by fluency or apparent helpfulness, but by discernment: source quality, premise, context, uncertainty, and consequences.</p><div class="verdict"><strong>Principle:</strong> An AI answer is an input to judgment, not a replacement for judgment.</div></article>
+<article class="card"><div class="tag">03 · Language and access</div><h3>Mother-tongue knowledge</h3><p>Phukan’s Assamese writing made complex philosophical ideas accessible to readers beyond a Sanskrit- or English-reading scholarly audience. Today, language technology can help preserve and access Assamese texts—if it is grounded, reviewed, and community-aware.</p><div class="verdict"><strong>Opportunity:</strong> Assamese OCR, citation-grounded translation, and linked concepts—with human editorial review.</div></article>
+</div>
+</div>
+</section><section class="concepts" id="samkhya-concepts">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">A philosophical lens · Not a scientific equivalence</div>
+<h2>Sāṃkhya Concepts Mapped to AI</h2>
+<p class="lead">These comparisons are intended to help visitors ask better questions. They are analogies for discussion—not proof about the architecture or consciousness of AI systems.</p>
+</div>
+<div class="concept-grid">
+<article class="concept-card"><span class="concept-term">Purusha</span><h3>Witness-consciousness</h3><p>In the Sāṃkhya framework, Purusha is consciousness as witness. In the AI conversation, it prompts the question: does a system’s apparent cognition entail subjective awareness? This analogy does not settle the question empirically.</p></article>
+<article class="concept-card"><span class="concept-term">Prakriti</span><h3>Nature and processes</h3><p>Prakriti includes material and mental processes. Computation, data, model parameters, and generated output can be discussed by analogy as processes in the natural/material domain—not as a literal identification of AI with Prakriti.</p></article>
+<article class="concept-card"><span class="concept-term">Buddhi</span><h3>Intellect / discernment — Buddhi (বুদ্ধি)</h3><p>AI may perform tasks that resemble analysis or classification. The comparison should not conflate task performance with the philosophical faculty—or with human judgment.</p></article>
+<article class="concept-card"><span class="concept-term">Manas</span><h3>Mind / coordination — Manas (মন)</h3><p>Input processing and coordination can offer a limited analogy. Similar function does not establish that an AI has a mind in the Sāṃkhya sense.</p></article>
+<article class="concept-card"><span class="concept-term">Ahamkara</span><h3>“I”-making / self-reference — Ahamkara (অহংকাৰ)</h3><p>A model can produce first-person language or maintain a persona. That behaviour alone is not evidence of a self or subjective experience.</p></article>
+<article class="concept-card"><span class="concept-term">Gunas</span><h3>Sattva · Rajas · Tamas</h3><p>As a reflective lens: Is an answer clear and well-grounded? Is it hurried or overactive? Is it obscure or inert? These are questions about output quality—not a claim that models literally possess the Gunas.</p></article>
+<article class="concept-card concept-highlight"><span class="concept-term">Viveka</span><h3>Discrimination kept in the human — Viveka (বিবেক)</h3><p>Discernment means distinguishing source from assertion, evidence from analogy, and fluency from reliability. In this page’s central thesis, it remains a human discipline of evaluation and responsibility.</p></article>
+</div>
+<div class="concept-note"><b>Contemporary conversation:</b> Jonathan Edelmann’s essays explore how Sāṃkhya’s account of mind, body, and consciousness may frame philosophical questions about AI. They are a modern interpretation—not Phukan’s own writing or an empirical verdict on machine consciousness.</div>
+</div>
+</section>
+<section class="comparison" id="comparison">
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">A comparison, not an equivalence</div><h2>Phukan and the LLM — Two Methods, Different Responsibilities</h2></div>
+<div class="table-wrap"><table><thead><tr><th>Phukan’s documented practice</th><th>AI-age application</th><th>Human safeguard</th></tr></thead><tbody>
+<tr><td>Return to foundational texts</td><td>Retrieve primary sources rather than only summaries</td><td>Open and inspect the cited source</td></tr>
+<tr><td>Question a philosophical classification</td><td>Challenge the prompt’s assumptions</td><td>Reframe and test the opposite premise</td></tr>
+<tr><td>Compare philosophical systems and modern science</td><td>Place sources and interpretations side by side</td><td>Preserve disagreement and context</td></tr>
+<tr><td>Use scientific illustrations to explain ideas</td><td>Use analogies to make complex concepts accessible</td><td>State where the analogy stops; do not present it as proof</td></tr>
+<tr><td>Write for understanding and self-realization</td><td>Turn AI output into a usable explanation or decision aid</td><td>State uncertainty; keep human accountability</td></tr>
+</tbody></table></div><div class="comparison-thesis"><b>Viveka is not a feature we add to AI. It is a discipline we keep in the human.</b><p>AI can assist with retrieval, comparison, and synthesis; it can also produce fluent errors. The human role is to inspect evidence, judge the limits, and remain accountable.</p></div>
+<p class="note" style="margin-top:14px">LLMs can assist with retrieval, comparison, and synthesis, but they can also produce fabricated or unsupported claims and citations. The table describes a disciplined way to use them, not a claim that they reliably perform each step.</p>
+</div>
+</section>
+<section class="test" id="phukan-test">
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">An interactive practice</div><h2>The Phukan Test</h2><p class="lead">Evaluate an AI answer through five disciplines. Your Yes / No / Maybe choices generate targeted follow-up prompts and a practical next-step plan.</p></div>
+<div class="test-panel">
+<div class="progress-row"><strong>Five questions for discernment</strong><span aria-live="polite" class="result" id="progress-label">0 of 5 answered</span></div><div aria-label="Checklist progress" aria-valuemax="5" aria-valuemin="0" aria-valuenow="0" class="progress" id="progress" role="progressbar"><span id="progress-bar"></span></div>
+<div class="test-list"><div class="test-item"><div class="question-copy"><strong>1. SOURCE — Can I trace the important claims to a source?</strong><span>Check the original or authoritative source and confirm it supports the claim—not just a summary.</span></div><div aria-label="SOURCE? response" class="choice-group" role="group"><label class="choice"><input name="check-1" type="radio" value="yes"/><span>Yes</span></label><label class="choice"><input name="check-1" type="radio" value="no"/><span>No</span></label><label class="choice"><input name="check-1" type="radio" value="maybe"/><span>Maybe</span></label></div><div aria-live="polite" class="answer-guidance" data-guidance='{"Yes": "You traced the claim to its source and checked the supporting passage. Keep the citation with the claim; a citation is useful only when it actually supports what is being said.", "No": "The claim is not yet source-checked. Ask: “For each important factual claim, provide the original or most authoritative source, an exact supporting passage, and enough details for me to locate it. Do not invent citations.” Then open and inspect the source.", "Maybe": "A source is present, but its authority or relevance is uncertain. Ask: “Explain why this source is reliable for this specific claim, identify its limitations, and provide an independent source I can compare.” Verify the source before relying on the claim."}'></div></div><div class="test-item"><div class="question-copy"><strong>2. PREMISE — Is the question framed fairly and correctly?</strong><span>Examine the question’s assumptions and consider a reasonable alternative framing.</span></div><div aria-label="PREMISE? response" class="choice-group" role="group"><label class="choice"><input name="check-2" type="radio" value="yes"/><span>Yes</span></label><label class="choice"><input name="check-2" type="radio" value="no"/><span>No</span></label><label class="choice"><input name="check-2" type="radio" value="maybe"/><span>Maybe</span></label></div><div aria-live="polite" class="answer-guidance" data-guidance='{"Yes": "You have checked the framing. Note the key assumption and the alternative framing you considered; this helps prevent a fluent answer to the wrong question.", "No": "The question’s assumptions have not been examined. Ask: “List the assumptions in my question. Which could be false or incomplete? Reframe the question in at least one reasonable alternative way, then answer both framings.”", "Maybe": "You suspect the framing may be incomplete, but cannot identify how. Ask: “What ambiguity or hidden assumption could change the answer? Ask me a clarifying question if needed, then show how the answer changes under different interpretations.”"}'></div></div><div class="test-item"><div class="question-copy"><strong>3. COMPARE — Have I checked another credible perspective?</strong><span>Compare an independent credible source or interpretation; note important disagreements.</span></div><div aria-label="COMPARE? response" class="choice-group" role="group"><label class="choice"><input name="check-3" type="radio" value="yes"/><span>Yes</span></label><label class="choice"><input name="check-3" type="radio" value="no"/><span>No</span></label><label class="choice"><input name="check-3" type="radio" value="maybe"/><span>Maybe</span></label></div><div aria-live="polite" class="answer-guidance" data-guidance='{"Yes": "You checked another credible perspective. Record what the comparison supports and where the sources differ. Preserve meaningful disagreement instead of forcing a single conclusion.", "No": "You have not yet checked another perspective. Ask: “Find an independent, credible source or interpretation relevant to this claim. Cite the exact passage, explain how it compares, and identify any disagreement.” Then inspect that source yourself.", "Maybe": "You found another perspective, but its credibility or the difference is unclear. Ask: “Put these perspectives side by side. Assess source quality, identify the exact point of disagreement, show the evidence for each, and state what remains unresolved.”"}'></div></div><div class="test-item"><div class="question-copy"><strong>4. TEST — What is evidence, and what is interpretation or analogy?</strong><span>Separate verifiable evidence from inference, analogy, and uncertainty.</span></div><div aria-label="TEST? response" class="choice-group" role="group"><label class="choice"><input name="check-4" type="radio" value="yes"/><span>Yes</span></label><label class="choice"><input name="check-4" type="radio" value="no"/><span>No</span></label><label class="choice"><input name="check-4" type="radio" value="maybe"/><span>Maybe</span></label></div><div aria-live="polite" class="answer-guidance" data-guidance='{"Yes": "You distinguished evidence from interpretation and checked the material claims. Keep uncertainty visible; an analogy can illuminate an idea, but it is not proof.", "No": "The answer has not been adequately tested. Ask: “Separate your response into sourced facts, inference, analogy, and uncertainty. For each material factual claim, show what evidence supports it and what would weaken or falsify it.” Independently verify consequential claims.", "Maybe": "The evidence and interpretation are mixed together. Ask: “Annotate the answer sentence by sentence: evidence, inference, analogy, or unsupported assertion. Identify the claims most in need of verification and explain why.”"}'></div></div><div class="test-item"><div class="question-copy"><strong>5. REALISE — Do I know what follows, and who is accountable?</strong><span>Clarify the conclusion or action, what remains uncertain, and who is responsible.</span></div><div aria-label="REALISE? response" class="choice-group" role="group"><label class="choice"><input name="check-5" type="radio" value="yes"/><span>Yes</span></label><label class="choice"><input name="check-5" type="radio" value="no"/><span>No</span></label><label class="choice"><input name="check-5" type="radio" value="maybe"/><span>Maybe</span></label></div><div aria-live="polite" class="answer-guidance" data-guidance='{"Yes": "You understand the implications and retain responsibility for the decision. State the action, the remaining uncertainty, and who is accountable—especially where consequences matter.", "No": "You do not yet have a clear next step. Ask: “Summarize what can reasonably be concluded, what remains unknown, what options are available, and what should be verified before acting. Do not make the decision for me.”", "Maybe": "The implications or responsibility are unclear. Ask: “What could change the decision? What uncertainty remains? Who should review this, and what evidence is needed before taking action?”"}'></div></div></div>
+<div class="rule"><strong>Rule of use:</strong> This is a reflection aid, not a truth certificate. If a material claim cannot be traced to a credible source, do not rely on it. Independently verify consequential decisions.</div>
+<div aria-live="polite" class="test-outcome" id="test-outcome"><h3>Your review will guide the next step</h3><p>Choose an answer for each check. The result will not merely score the response: it will identify the exact follow-up needed, offer a prompt you can use with the AI, and tell you what to verify yourself.</p></div>
+<div class="test-actions"><button id="reset-test" type="button">Reset answers</button></div>
+</div>
+</div>
+</section>
+<section class="ideas" id="ideas-lab">
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">A future-facing proposal</div><h2>Ideas Lab — From archive to living knowledge</h2><p class="lead">A set of possible projects that could make Phukan’s works more accessible while preserving scholarly and community oversight.</p></div>
+<div class="ideas-grid"><article class="idea"><div class="status">Proposed initiative</div><h3>Digitise and OCR Rachanawali</h3><p>Create searchable digital text from scans, with page-level links and correction workflows for Assamese and English.</p></article><article class="idea"><div class="status">Proposed initiative</div><h3>Build a Phukan concept graph</h3><p>Link key terms, texts, translations, philosophical schools, citations, and interpretive notes across Assamese and English. A Viveka-Insight-style cross-lingual graph can be a model to explore—not a completed asset.</p></article><article class="idea"><div class="status">Proposed initiative</div><h3>Source-grounded AI translation</h3><p>Generate draft translations with sentence-level source alignment, visible uncertainty, and expert review. Keep source text and editorial decisions accessible.</p></article><article class="idea"><div class="status">Proposed initiative</div><h3>Philosophy learning companion</h3><p>Explain Kārikā concepts through carefully bounded modern-science analogies, always marking where the analogy stops and returning to the source.</p></article><article class="idea"><div class="status">Proposed initiative</div><h3>Samkhya-informed AI ethics learning module</h3><p>Use questions of discernment, attachment to fluent output, and human responsibility as a reflective learning module—not as a claim that Sāṃkhya directly prescribes modern AI policy.</p></article></div><div class="visitor-usecases">
+<div class="section-head">
+<div class="eyebrow">For visitors · Practical pathways</div>
+<h3>Where This Method Can Be Used</h3>
+<p>The Phukan Test is not limited to philosophy or translation. Use the same discipline to review AI-generated claims, explanations, recommendations, and decisions in any field.</p>
+</div>
+<div class="usecase-grid"><article><b>Student</b><p>Review AI explanations, summaries, and study answers. Check cited sources, challenge assumptions, compare interpretations, and make sure you can explain the result in your own understanding.</p></article><article><b>Educator</b><p>Use AI to prepare lesson ideas, examples, or feedback—then verify factual claims, check for bias or omissions, and keep the teacher accountable for what reaches learners.</p></article><article><b>Researcher</b><p>Interrogate AI-assisted literature reviews, summaries, translations, and hypotheses. Trace claims to primary sources, compare competing accounts, and separate evidence from inference.</p></article><article><b>Professional</b><p>Evaluate AI recommendations in your work—whether in engineering, healthcare, law, finance, or another domain. Verify against relevant standards, data, and expert judgment before acting.</p></article><article><b>Developer</b><p>Design AI products with source traceability, uncertainty cues, alternative perspectives, and human review. Test not only whether an answer sounds good, but whether it is grounded and safe for its intended use.</p></article><article><b>Journalist · Citizen</b><p>Check AI-generated news explanations, public claims, and viral content before repeating them. Find original evidence, examine counter-claims, and communicate what is known and what is uncertain.</p></article></div><p class="usecase-note">For high-stakes decisions, this framework is a starting point—not a substitute for qualified review, authoritative evidence, or required professional and regulatory processes.</p>
+</div>
+</div>
+</section>
+<section class="thought-experiment" id="phukan-chatgpt">
+<div class="wrap">
+<div class="thought-layout">
+<div>
+<div class="eyebrow">A grounded thought experiment · Not a historical claim</div>
+<h2>What Might Phukan Ask ChatGPT Today?</h2>
+<p class="lead">We cannot know what Phukan would have asked. But his documented emphasis on translation, source texts, interpretation, and modern-science illustrations gives us a disciplined way to imagine a useful exchange.</p>
+</div>
+<div class="thought-card">
+<div class="thought-line"><span>01</span><p>Show the original Sanskrit alongside Assamese and English. Identify translation choices.</p></div>
+<div class="thought-line"><span>02</span><p>Present the strongest arguments for and against a disputed interpretation—such as whether Sāṃkhya is atheistic.</p></div>
+<div class="thought-line"><span>03</span><p>Offer a modern-physics illustration, then explain where the analogy stops.</p></div>
+<div class="thought-line"><span>04</span><p>Provide sources and exact passages that can be inspected—not merely a confident summary.</p></div>
+<div class="thought-line"><span>05</span><p>Rewrite the explanation in clear Assamese for a lay reader, preserving nuance.</p></div>
+<div class="thought-conclusion">Not “Tell me the truth.”<br/><b>“Show me the evidence so I can judge.”</b></div>
+</div>
+</div>
+</div>
+</section><section class="parallel" id="parallel">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Comparative inquiry · Critical reading</div>
+<h2>A Parallel Is a Question—not a Proof</h2>
+<p class="lead">Comparing philosophical ideas with modern science can open valuable questions. But resemblance alone does not establish scientific equivalence, prediction, or proof.</p>
+</div>
+<div class="parallel-grid">
+<article class="parallel-card">
+<div class="parallel-label">A contemporary Sāṃkhya–AI conversation</div>
+<h3>Natural and Artificial Intelligence, and Consciousness</h3>
+<p>In a two-part essay, philosopher of religion Jonathan Edelmann explores how Sāṃkhya’s distinction between materiality, mental processes, and consciousness might frame questions about artificial intelligence. He treats AI as a philosophical problem: what counts as intelligence, what is meant by consciousness, and how might different traditions conceptualize them?</p>
+<p class="parallel-caveat"><strong>Read it as:</strong> a contemporary philosophical interpretation of Sāṃkhya—not as a position authored by Radhanath Phukan, nor as an empirical demonstration that AI is or is not conscious.</p>
+<div class="parallel-links"><a href="https://indianphilosophyblog.org/2020/07/29/natural-and-artificial-intelligence-and-consciousness-part-i-jonathan-edelmann/" rel="noopener" target="_blank">Part I — Sāṃkhya, mind, and consciousness ↗</a><a href="https://indianphilosophyblog.org/2020/08/09/natural-and-artificial-intelligence-and-consciousness-part-ii/" rel="noopener" target="_blank">Part II — Applying the framework to AI ↗</a></div>
+</article>
+<article class="parallel-card">
+<div class="parallel-label">Physics and philosophical comparison</div>
+<h3>Fritjof Capra — <em>The Tao of Physics</em></h3>
+<p>Capra’s widely read work places themes from modern physics in conversation with Eastern philosophical and mystical traditions. It can serve as a point of entry into comparative inquiry—and a reminder to ask how a proposed parallel is constructed.</p>
+<p class="parallel-caveat"><strong>Read it critically:</strong> scholarly critiques have questioned whether Capra sufficiently justifies the different interpretations of physics he draws together. A parallel may be suggestive without being a scientific equivalence.</p>
+<div class="parallel-links"><a href="https://archive.org/details/taoofphysics" rel="noopener" target="_blank">Read <em>The Tao of Physics</em> on Internet Archive ↗</a><a href="https://doi.org/10.1111/j.1467-9744.1990.tb00871.x" rel="noopener" target="_blank">Clifton &amp; Regehr — critical review in <em>Zygon</em> ↗</a></div>
+</article>
+</div>
+<div class="parallel-principle"><strong>The Phukan-inspired discipline:</strong> compare with respect, trace the sources, examine the reasoning, and keep the boundary clear between an illuminating analogy and a demonstrated claim.</div>
+</div>
+</section><section class="sources" id="sources">
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">Evidence and further reading</div><h2>Sources</h2><p class="lead">Primary text and contemporary standards are linked here so readers can follow the evidence and explore the ideas themselves.</p></div>
+<ol class="sources-list">
+<li><a href="https://gsl.lbsnaa.gov.in/opac-tmpl/bootstrap/Books/100703.pdf" rel="noopener" target="_blank">Radhanath Phukan, <em>The Sāṃkhya Kārikā</em> (1960), digitized edition</a> — primary source; preface on Assamese translations and modern physical-science illustrations.</li>
+<li><a href="https://books.google.com/books/about/The_S%C4%81%E1%B9%81khya_K%C4%81rik%C4%81_of_I%C5%9Bvarak%E1%B9%9B.html?id=RusYAAAAIAAJ" rel="noopener" target="_blank">Google Books bibliographic record</a> — title, editor/translator, publisher, date, and subtitle.</li>
+<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence" rel="noopener" target="_blank">NIST, AI Risk Management Framework: Generative AI Profile (2024)</a> — confabulation and trustworthiness considerations.</li>
+<li><a href="https://www.nist.gov/programs-projects/building-evaluation-probes-agentic-ai" rel="noopener" target="_blank">NIST, Building Evaluation Probes into Agentic AI (2026)</a> — source grounding, faithfulness, completeness, and sufficiency.</li>
+<li><a href="https://www.unesco.org/en/global-roadmap-multilingualism" rel="noopener" target="_blank">UNESCO, Global Roadmap for Multilingualism in the Digital Era (2025)</a> — language community participation and equitable language technology.</li>
+<li><a href="https://aclanthology.org/2024.icon-1.10/" rel="noopener" target="_blank">Khargharia &amp; Borgohain, Assamese handwritten text dataset (ICON 2024)</a> — research context for Assamese OCR.</li>
+<li><a href="https://ilocr.iiit.ac.in/dataset/3/" rel="noopener" target="_blank">IIIT Hyderabad, Mozhi-Assamese OCR dataset</a> — printed Assamese word images and transcriptions.</li>
+<li><a href="https://ntfghy.org/digitising-assam/" rel="noopener" target="_blank">Nanda Talukdar Foundation, Digitising Assam</a> — current archive digitization and search initiatives in Assam.</li>
+<li><a href="https://indianphilosophyblog.org/2020/07/29/natural-and-artificial-intelligence-and-consciousness-part-i-jonathan-edelmann/" rel="noopener" target="_blank">Jonathan Edelmann, “Natural and Artificial Intelligence, and Consciousness, Part I” (2020)</a> — contemporary Sāṃkhya framing of materiality, mind, and consciousness.</li><li><a href="https://indianphilosophyblog.org/2020/08/09/natural-and-artificial-intelligence-and-consciousness-part-ii/" rel="noopener" target="_blank">Jonathan Edelmann, “Natural and Artificial Intelligence, and Consciousness, Part II” (2020)</a> — applies the framework to AI and raises philosophical questions about artificial systems.</li><li><a href="https://archive.org/details/taoofphysics" rel="noopener" target="_blank">Fritjof Capra, <em>The Tao of Physics</em></a> — comparative work on modern physics and Eastern mysticism; included as a subject for critical reading, not scientific proof.</li><li><a href="https://doi.org/10.1111/j.1467-9744.1990.tb00871.x" rel="noopener" target="_blank">Robert K. Clifton and Marilyn G. Regehr, “Toward a Sound Perspective on Modern Physics” (<em>Zygon</em>, 1990)</a> — scholarly critique of Capra’s use of interpretations of physics.</li><li><a href="https://jorhat.assam.gov.in/information-and-services/renowned-personalities" rel="noopener noreferrer" target="_blank">Government of Assam, Jorhat — Radhanath Phukan biography</a>.</li><li><a href="https://archive.org/stream/in.ernet.dli.2015.536492/2015.536492.The-Samkhya_djvu.txt" rel="noopener noreferrer" target="_blank">Internet Archive OCR — The Sāṃkhya Kārikā (1960)</a>.</li></ol>
+<p class="note">Interpretive note: “The Phukan Method,” the AI comparison, and the checklist are contemporary editorial frameworks inspired by documented scholarship. They are not presented as phrases or formal protocols authored by Radhanath Phukan.</p>
+</div>
+</section>
+<footer><a href="/">← Back to the Living Digital Archive</a><p style="margin:8px 0 0">From Phukan’s World to the Age of AI · A contemporary Ideas Lab</p><div class="evidence-legend">Evidence guide: Primary source · Corroborating source · Family-held material</div></footer>
+
+<script id="interactive-phukan-test-js">
+(function(){
+ const labels=['SOURCE?','PREMISE?','COMPARE?','TEST?','REALISE?'];
+ const items=[
+  {
+   title:'SOURCE?', yes:'You have traced the claim to a source and checked the passage. Keep the exact citation and note whether it supports the whole claim or only part of it.',
+   no:'The claim is not source-grounded yet. Treat it as unverified; do not repeat it as fact.',
+   maybe:'The source trail is incomplete or the support is ambiguous. Resolve that uncertainty before relying on the claim.',
+   verify:'Open the cited source yourself. Check author, title, date, exact passage, context, and whether the source is primary or secondary.',
+   prompts:{
+    yes:'For each material claim, list the original source, exact supporting passage, and any limitation. Do not cite a source unless it directly supports the claim.',
+    no:'Give the original source for each material claim, with exact quotations or page/section references. If you cannot locate a source, mark the claim unverified and remove it from the factual conclusion.',
+    maybe:'Show the source trail for this claim. Identify exactly what the source supports, what it does not support, and what remains unverified.'
+   }
+  },
+  {
+   title:'PREMISE?', yes:'The question’s assumptions have been surfaced and challenged. Preserve the alternative framing so the answer does not hide a disputed premise.',
+   no:'The question may be steering the answer. Reframe it before accepting the conclusion.',
+   maybe:'Some assumptions remain unstated. Ask the AI to expose them and answer under a competing interpretation.',
+   verify:'Write the assumptions as explicit statements. Ask whether the question contains a false dichotomy, loaded wording, missing context, or an untested causal claim.',
+   prompts:{
+    yes:'State the assumptions in my question, give the strongest reasonable counter-framing, and explain whether the conclusion changes under that framing.',
+    no:'Do not accept my framing. Identify hidden assumptions, possible false premises, and the strongest alternative framing. Answer both versions and explain what evidence distinguishes them.',
+    maybe:'List the assumptions you are making. For each, say what would change if it were false; then answer using at least one plausible alternative framing.'
+   }
+  },
+  {
+   title:'COMPARE?', yes:'You have compared the answer with an independent source or interpretation. Record the disagreements rather than smoothing them into false consensus.',
+   no:'A single account is not enough for this claim. Seek a genuinely independent comparison.',
+   maybe:'The comparison is not yet independent or the disagreement is unresolved. Make the difference explicit.',
+   verify:'Use sources with different provenance or viewpoints. Check whether they rely on the same underlying source; compare evidence, method, and scope.',
+   prompts:{
+    yes:'Compare the sources in a table: claim, evidence, method, agreement, disagreement, and limits. Do not force a consensus where sources differ.',
+    no:'Find two independent, credible sources that address this claim. Summarize their evidence and disagreements, and disclose if no reliable comparison is available.',
+    maybe:'Identify a genuinely independent source or contrasting interpretation. Explain whether it supports, qualifies, or contradicts the answer, with evidence.'
+   }
+  },
+  {
+   title:'TEST?', yes:'You have separated evidence from inference and analogy. Keep those labels visible; a useful analogy is not itself proof.',
+   no:'The answer mixes assertion, inference, or analogy with evidence. Separate the layers and test the factual claims.',
+   maybe:'The evidentiary boundary is unclear. Mark each key statement as established, inferred, analogical, or uncertain.',
+   verify:'Check the claim against the right kind of evidence. For scientific claims, seek empirical research; for historical claims, primary records; for philosophical claims, faithful textual argument.',
+   prompts:{
+    yes:'Classify each key statement as directly evidenced, inferred, analogy, or uncertain. State the evidence and limits for each, and remove any unsupported leap.',
+    no:'Audit this answer sentence by sentence. Label facts, inference, analogy, and uncertainty; provide evidence for factual claims and revise or remove unsupported claims.',
+    maybe:'What is directly demonstrated here, what is interpretation or analogy, and what remains uncertain? Propose a way to test each uncertain factual claim.'
+   }
+  },
+  {
+   title:'REALISE?', yes:'You have identified a proportionate action and a responsible decision-maker. Keep the uncertainty and review conditions attached to the decision.',
+   no:'The answer has not yet translated into a responsible decision. Do not act until the consequence, owner, and review step are clear.',
+   maybe:'The practical implication or accountability is unclear. Define what decision is being made and who owns it.',
+   verify:'Ask whether the proposed action follows from the evidence, what could go wrong, who is accountable, and what would trigger reconsideration.',
+   prompts:{
+    yes:'Turn the verified conclusion into a practical next step. State the limits, who owns the decision, and what evidence would make us revisit it.',
+    no:'Do not recommend action yet. State the decision at stake, possible consequences, responsible human decision-maker, and minimum verification required first.',
+    maybe:'What action—if any—follows? State the uncertainty, potential consequence, accountable person, and a condition that would change the recommendation.'
+   }
+  }
+ ];
+ const outcome=document.getElementById('test-outcome'), progress=document.getElementById('progress-label'), bar=document.getElementById('progress-bar'), meter=document.getElementById('progress');
+ function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+ function evaluate(){
+  const values=items.map((_,i)=>{const el=document.querySelector('input[name="check-'+(i+1)+'"]:checked');return el?el.value:null});
+  const count=values.filter(Boolean).length, no=values.filter(v=>v==='no').length, maybe=values.filter(v=>v==='maybe').length, yes=values.filter(v=>v==='yes').length;
+  progress.textContent=count+' of 5 answered';bar.style.width=(count*20)+'%';meter.setAttribute('aria-valuenow',count);
+  if(!count){outcome.innerHTML='<h3>Your review will guide the next step</h3><p>Choose Yes, No, or Maybe for each check. Your result will identify specific gaps, offer follow-up prompts, and separate what the AI can clarify from what you must verify independently.</p>';return;}
+  let heading,summary,action;
+  if(count<5){heading='Review in progress';summary='You have answered '+count+' of 5 checks. The guidance below updates now; complete the remaining checks for an overall recommendation.';action='Answer the remaining questions. Use the prompts below to close gaps as you go.';}
+  else if(no>0){heading='Do not rely on this answer yet';summary='One or more essential checks are marked No. The answer has a material gap; treat it as unverified until the failed checks are addressed.';action='First address every No item, then resolve each Maybe. Ask the AI to revise with evidence, but independently inspect sources. Re-run the test on the revised answer.';}
+  else if(maybe>0){heading='Needs further review';summary='No check is marked No, but uncertainty remains. The answer may be useful as a lead—not yet as a dependable conclusion.';action='Resolve each Maybe by using its prompt and the independent verification step. If the uncertainty cannot be resolved, preserve it in the final conclusion.';}
+  else{heading='Stronger basis to proceed';summary='All five checks are marked Yes. This is a disciplined review—not a truth certificate. Keep sources and reasoning attached to the answer.';action='Proceed proportionately. For high-impact decisions, independently verify critical claims and have the accountable human review the decision.';}
+  let html='<div class="verdict">'+(count===5?'Final assessment':'Live assessment')+'</div><h3>'+heading+'</h3><p class="outcome-summary">'+summary+'</p><ul class="test-advice-list">';
+  values.forEach((v,i)=>{
+   if(!v)return;
+   const item=items[i], prompt=item.prompts[v];
+   html+='<li class="advice-card"><strong>'+ (i+1)+'. '+item.title+' — '+v.toUpperCase()+'</strong><p>'+esc(item[v])+'</p><p><b>What to do:</b> '+esc(item.verify)+'</p><p class="prompt"><b>Suggested follow-up to the AI:</b><br>“'+esc(prompt)+'”</p><button type="button" class="copy-prompt" data-prompt="'+esc(prompt)+'">Copy follow-up prompt</button></li>';
+  });
+  html+='</ul><div class="overall-next"><b>Your next step:</b> '+esc(action)+'</div><p style="font-size:.9rem;margin-top:12px"><b>Use principle:</b> AI can help clarify and compare; you remain responsible for checking sources and consequential judgments.</p>';
+  outcome.innerHTML=html;
+  outcome.querySelectorAll('.copy-prompt').forEach(btn=>btn.addEventListener('click',async()=>{
+   const text=btn.getAttribute('data-prompt');
+   try{await navigator.clipboard.writeText(text);btn.textContent='Copied';}
+   catch(e){btn.textContent='Select and copy the prompt';}
+  }));
+ }
+ document.querySelectorAll('.test-item input').forEach(el=>el.addEventListener('change',evaluate));
+ document.getElementById('reset-test').addEventListener('click',()=>{document.querySelectorAll('.test-item input').forEach(el=>el.checked=false);evaluate();});
+ evaluate();
+})();
+</script><script id="ai-page-review2-guidance-logic">
+(function(){
+  document.querySelectorAll('.test-item').forEach(function(item){
+    const guidance = item.querySelector('.answer-guidance');
+    const choices = item.querySelectorAll('input[type="radio"]');
+    if (!guidance) return;
+
+    let map = {};
+    try { map = JSON.parse(guidance.getAttribute('data-guidance') || '{}'); } catch(e) {}
+
+    // Keep the guidance blank until a choice is made. Radio values are lowercase,
+    // while the data keys are title case; normalize the lookup to avoid fallback copy.
+    guidance.textContent = '';
+    guidance.classList.remove('is-visible');
+
+    choices.forEach(function(choice){
+      choice.addEventListener('change', function(){
+        if (!choice.checked) return;
+        const key = choice.value.charAt(0).toUpperCase() + choice.value.slice(1).toLowerCase();
+        const response = map[key];
+        if (response) {
+          guidance.textContent = response;
+          guidance.classList.add('is-visible');
+        } else {
+          guidance.textContent = '';
+          guidance.classList.remove('is-visible');
+        }
+      });
+    });
+  });
+})();
+</script></body>
+</html>
